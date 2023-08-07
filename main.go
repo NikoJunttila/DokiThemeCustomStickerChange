@@ -17,6 +17,7 @@ func main() {
 	animeGifsPath := "F:/dank stuff/animu/cute gifs/vsc"
 	flag.DurationVar(&timeout, "timeout", 60*time.Minute, "specify the timeout duration in minutes")
 	repeatFlagPtr := flag.Bool("repeat", false, "a bool")
+	stringFlagPtr := flag.String("choose", "", "a string")
 	flag.Parse()
 	for {
 
@@ -24,6 +25,9 @@ func main() {
 		randomIndex := rand.Intn(len(fileNames))
 		randomFileName := fileNames[randomIndex]
 		randomFilePath := animeGifsPath + "/" + randomFileName
+		if len(*stringFlagPtr) > 1 {
+			randomFilePath = animeGifsPath + "/" + *stringFlagPtr + ".gif"
+		}
 		file, err := os.Open(filePath)
 		if err != nil {
 			fmt.Println("Error opening file:", err)
