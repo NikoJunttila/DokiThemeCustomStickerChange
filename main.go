@@ -17,7 +17,7 @@ func main() {
 	animeGifsPath := "F:/dank stuff/animu/cute gifs/vsc"
 	flag.DurationVar(&timeout, "timeout", 60*time.Minute, "specify the timeout duration in minutes")
 	repeatFlagPtr := flag.Bool("repeat", false, "a bool")
-	stringFlagPtr := flag.String("choose", "", "a string")
+	stringFlagPtr := flag.String("c", "", "a string")
 	flag.Parse()
 	for {
 
