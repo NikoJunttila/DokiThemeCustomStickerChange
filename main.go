@@ -13,6 +13,7 @@ import (
 var timeout time.Duration
 
 func main() {
+  //change this line below to fit your own settings
 	filePath := "C:/Users/Derp/AppData/Roaming/Code/User/settings.json"
 	animeGifsPath := "F:/dank stuff/animu/cute gifs/vsc"
 	flag.DurationVar(&timeout, "timeout", 60*time.Minute, "specify the timeout duration in minutes")
